@@ -1,0 +1,45 @@
+GitHub -> Termux -> Tailscale -> Windows App
+
+Mục tiêu:
+- Dùng GitHub lưu trữ project.
+- Dùng Termux trên Android để quản lý và kết nối.
+- Dùng Tailscale để tạo mạng riêng ảo an toàn.
+- Cuối cùng truy cập qua Windows App.
+
+Chuỗi xử lý:
+1. Tạo repo hoặc mở repo trên GitHub.
+2. Dùng GitHub Codespace hoặc máy chủ từ xa.
+3. Kết nối qua Termux.
+4. Cài đặt Tailscale để tạo mạng riêng.
+5. Đảm bảo thiết bị Windows và máy chủ cùng mạng Tailscale.
+6. Mở Windows App để vào môi trường từ xa.
+
+Yêu cầu:
+- Tài khoản GitHub
+- Termux cài trên Android
+- Kết nối Internet
+- Máy tính Windows hỗ trợ Tailscale hoặc Remote App
+- Tailscale Auth Key hoặc login tài khoản
+
+Các bước cơ bản:
+- Cài đặt Termux
+- Cài git, gh, openssh
+- gh auth login
+- git clone repo
+- Cài Tailscale trên thiết bị cần kết nối
+- tailscale up
+- Kiểm tra trạng thái: tailscale status
+- Kết nối từ Windows App qua mạng Tailnet
+
+Lưu ý:
+- Nếu Termux không hỗ trợ Tailscale trực tiếp, cần có máy chủ trung gian hoặc máy Windows làm cầu nối.
+- Không chia sẻ auth key và SSH private key.
+
+Kết luận:
+- GitHub là nơi lưu code.
+- Termux là nơi thao tác từ điện thoại.
+- Tailscale là lớp bảo mật và mạng riêng.
+- Windows App là điểm cuối để truy cập từ xa.
+
+Cách mô tả ngắn gọn:
+GitHub -> Codespace/Remote -> Termux -> Tailscale -> Windows App
